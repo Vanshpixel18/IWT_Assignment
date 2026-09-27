@@ -1,0 +1,251 @@
+/* 
+  Shared CSS stylesheet for IWT Assignment Project
+  Color Scheme: Light Blue (#eef4f8), White (#ffffff), Navy Accent (#2f6fa7)
+  Typography: Clean sans-serif
+*/
+
+:root {
+  --primary-navy: #2f6fa7;
+  --secondary-blue: #4a90e2;
+  --dark-navy: #1d466c;
+  --bg-light: #eef4f8;
+  --card-bg: #ffffff;
+  --text-dark: #333333;
+  --text-muted: #666666;
+  --border-color: #d1e3f0;
+  --success-color: #27ae60;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  padding: 15px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--primary-navy);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+/* Card layout container */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(47, 111, 167, 0.08);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: var(--primary-navy);
+}
+
+/* Badge styling */
+.badge {
+  display: inline-block;
+  background-color: #e3f2fd;
+  color: var(--primary-navy);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #bbdefb;
+}
+
+.badge-success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-color: #c8e6c9;
+}
+
+/* Table styling for assignment requirements display */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+th, td {
+  padding: 10px 14px;
+  text-align: left;
+  border: 1px solid var(--border-color);
+  font-size: 14px;
+}
+
+th {
+  background-color: #f0f7fc;
+  color: var(--primary-navy);
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f9fbfd;
+}
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--dark-navy);
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #b0cbdf;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: var(--primary-navy);
+  box-shadow: 0 0 0 3px rgba(47, 111, 167, 0.15);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-navy);
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--dark-navy);
+}
+
+/* Login page specific centering container */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 380px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-header h1 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+/* Navigation Menu Styling (for nav.html) */
+body.nav-body {
+  padding: 10px;
+  background-color: #f4f8fb;
+}
+
+.nav-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  padding-left: 5px;
+}
+
+ul.nav-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.nav-menu li {
+  margin-bottom: 8px;
+}
+
+ul.nav-menu a {
+  display: block;
+  padding: 10px 14px;
+  background-color: #ffffff;
+  color: var(--primary-navy);
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+ul.nav-menu a:hover {
+  background-color: var(--primary-navy);
+  color: #ffffff;
+  border-color: var(--primary-navy);
+  transform: translateX(3px);
+}
+
+/* Banner Frame Body */
+body.banner-body {
+  padding: 10px 15px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--border-color);
+  overflow: hidden;
+}
+
+.banner-info {
+  text-align: right;
+  font-size: 13px;
+  color: var(--text-muted);
+}

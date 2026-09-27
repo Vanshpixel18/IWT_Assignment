@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>IWT Academic Portal - Frameset Layout</title>
+</head>
+
+<!-- 
+  FRAMESET LAYOUT:
+  - Outer frameset splits window into 2 rows: Top banner (120px) and bottom content (*).
+  - Inner frameset splits bottom row into 2 columns: Navigation sidebar (200px) and Main Content (*).
+-->
+<frameset rows="120,*" frameborder="1" border="2" framespacing="2" bordercolor="#2f6fa7">
+  
+  <!-- Banner Frame (Top) -->
+  <frame src="banner.html" name="bannerFrame" scrolling="no" noresize marginheight="0" marginwidth="0">
+  
+  <!-- Inner Frameset for Navigation and Main Content -->
+  <frameset cols="200,*" frameborder="1" border="2" framespacing="2" bordercolor="#d1e3f0">
+    <!-- Left Navigation Frame -->
+    <frame src="nav.html" name="navFrame" scrolling="auto" marginheight="10" marginwidth="10">
+    <!-- Right Main Content Frame -->
+    <frame src="content.php" name="mainFrame" scrolling="auto" marginheight="15" marginwidth="15">
+  </frameset>
+
+  <!-- Fallback message for non-frameset browsers -->
+  <noframes>
+    <body>
+      <p>Your browser does not support frames. Please visit the <a href="content.php">Main Dashboard Page</a> directly.</p>
+    </body>
+  </noframes>
+
+</frameset>
+</html>

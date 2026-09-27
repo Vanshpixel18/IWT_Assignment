@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Banner Header</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="banner-body">
+
+  <!-- 
+    ====================================================================
+    CLIENT-SIDE IMAGE MAP DEMONSTRATION
+    ====================================================================
+    - <img> tag links to the image file (logo.svg) and binds to the map using usemap="#logomap".
+    - <map name="logomap"> defines interactive clickable areas on top of the image.
+    - <area shape="circle">: Defines a circular region. Coordinates: (center_x, center_y, radius).
+    - <area shape="rect">: Defines a rectangular region. Coordinates: (left_x, top_y, right_x, bottom_y).
+    - target="mainFrame": Ensures clicked links open in the main content frame, not replacing the banner.
+  -->
+  
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <!-- Logo Image referencing Image Map -->
+    <img src="logo.svg" usemap="#logomap" alt="IWT Portal Logo Map" width="400" height="80" style="border: 0;">
+
+    <!-- HTML Client-Side Image Map Definition -->
+    <map name="logomap">
+      <!-- 
+        1. Circle Hotspot:
+           Center X=50, Center Y=40, Radius=30.
+           Clicking on the blue CIRCLE logo triggers home.html inside mainFrame.
+      -->
+      <area shape="circle" coords="50,40,30" href="home.html" target="mainFrame" alt="Home Section Circle Hotspot" title="Click Circle shape for Home page">
+
+      <!-- 
+        2. Rectangle Hotspot:
+           Top-Left=(310,15), Bottom-Right=(385,65).
+           Clicking on the white RECTANGLE logo triggers about.html inside mainFrame.
+      -->
+      <area shape="rect" coords="310,15,385,65" href="about.html" target="mainFrame" alt="About Section Rectangle Hotspot" title="Click Rectangle shape for About page">
+    </map>
+  </div>
+
+  <div class="banner-info">
+    <strong style="color: #2f6fa7; font-size: 16px;">Internet & Web Technology</strong><br>
+    5th Semester Academic Project | <span style="color: #4a90e2; font-weight: bold;">HTML4 Frameset & PHP Session</span>
+  </div>
+
+</body>
+</html>
